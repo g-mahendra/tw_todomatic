@@ -1,0 +1,104 @@
+.main-container {
+  width: 100vw;
+  background-color: #202020;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.todo-container {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.page-heading{
+  font-weight: bolder;
+  font-size: 3em;
+}
+
+.todo-input-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+#todo-input{
+  width: 70%;
+  border: none;
+  background-color: #404040;
+  color: white;
+  outline: none;
+  padding: 0.75rem;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+label{
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+#input-and-button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+#submit{
+  background-color: #00e1d3;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#todo-list{
+  margin: 2rem 0;
+  width: 75%;
+}
+
+.todo-input-container div:last-child{
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-input-container div:last-child button:nth-child(2){
+  background-color: lightgreen;
+}
+
+.todo-input-container div:last-child button:nth-child(3){
+  background-color: crimson;
+  color: white;
+}
+
+#filter-buttons > button:disabled{
+  background-color: gray;
+  color: darkgray;
+}
+
+@media only screen and (max-width: 720px) {
+  .todo-container{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .todo-container{
+    width: 100%;
+  }
+}
+
+#todo-list div:first-of-type{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
