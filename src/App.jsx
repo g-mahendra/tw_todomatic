@@ -83,7 +83,7 @@ const App = () => {
   const toDoList = (
     <div id="todo-list">
       <div>
-        <h2>Tasks remainging : {remaining}</h2>
+        <h2>Tasks remaining : {remaining}</h2>
         <button disabled={count === 0} onClick={handleClearAll}>
           Clear
         </button>
