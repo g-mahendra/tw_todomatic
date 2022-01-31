@@ -8,6 +8,7 @@ const App = () => {
   const [todo, setTodo] = useState(""); // state variable: to store todo text
   const [allToDos, setAllToDos] = useState([]); // state variable: array of todo items
   const [remaining, setRemaining] = useState(0); // state variable: to store count of remaining todos
+  const [count, setCount] = useState(0); // state variable: to store length of array of todo items
 
   // state variable: to apply filters based on filter button being clicked
   const [displayFilter, setDisplayFilter] = useState({
@@ -72,6 +73,7 @@ const App = () => {
 
   // to set the count of remainging todos
   useEffect(() => {
+    setCount(allToDos.length);
     setRemaining(allToDos.filter((todo) => !todo.completed).length);
   }, [allToDos]);
 
@@ -82,7 +84,7 @@ const App = () => {
     <div id="todo-list">
       <div>
         <h2>Tasks remainging : {remaining}</h2>
-        <button disabled={remaining === 0} onClick={handleClearAll}>
+        <button disabled={count === 0} onClick={handleClearAll}>
           Clear
         </button>
       </div>
